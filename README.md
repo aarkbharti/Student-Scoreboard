@@ -33,11 +33,3 @@ npm run dev
 ```
 
 4. Open the local link shown in the terminal
-
-## Build Project
-
-To create a production build:
-
-```bash
-npm run build
-```
