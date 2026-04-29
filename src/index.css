@@ -1,0 +1,251 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #eaf1ff;
+  background: #0f1724;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(50, 103, 184, 0.24) 0%, transparent 24%),
+    radial-gradient(circle at bottom right, rgba(255, 127, 98, 0.18) 0%, transparent 28%),
+    linear-gradient(180deg, #0c1320, #101a2b 58%, #0d1523);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 36px 16px 48px;
+}
+
+.wrapper {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 26px;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 24px 28px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(15, 24, 39, 0.96), rgba(21, 34, 54, 0.92));
+  border: 1px solid rgba(107, 145, 210, 0.22);
+  color: #f4f7ff;
+  font-size: clamp(2.4rem, 5vw, 4.3rem);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+  text-align: center;
+}
+
+.card {
+  margin-bottom: 24px;
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(15, 24, 39, 0.9);
+  border: 1px solid rgba(107, 145, 210, 0.18);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(8px);
+}
+
+.card h2 {
+  margin: 0 0 18px;
+  color: #f4f7ff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.student-form {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr auto;
+  gap: 14px;
+}
+
+.student-form input,
+.update-group input {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid rgba(125, 154, 204, 0.22);
+  border-radius: 14px;
+  background: rgba(8, 14, 24, 0.82);
+  color: #eaf1ff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.student-form input::placeholder,
+.update-group input::placeholder {
+  color: #8b9ab7;
+}
+
+.student-form input:focus,
+.update-group input:focus {
+  border-color: #6fa0ff;
+  box-shadow: 0 0 0 4px rgba(111, 160, 255, 0.14);
+}
+
+.student-form button,
+.update-group button {
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ff8b68, #f26445);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.student-form button {
+  padding: 15px 22px;
+  box-shadow: 0 12px 22px rgba(242, 100, 69, 0.24);
+}
+
+.student-form button:hover,
+.update-group button:hover {
+  transform: translateY(-1px);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  padding: 22px;
+  border-radius: 22px;
+  background: linear-gradient(160deg, rgba(18, 29, 47, 0.96), rgba(12, 20, 34, 0.92));
+  border: 1px solid rgba(107, 145, 210, 0.18);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+.summary-card p {
+  margin: 0 0 14px;
+  color: #90a4c6;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.summary-card h3 {
+  margin: 0;
+  color: #8fb8ff;
+  font-size: 2.7rem;
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(99, 149, 255, 0.18);
+}
+
+.table-box {
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(107, 145, 210, 0.14);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 17px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(107, 145, 210, 0.12);
+}
+
+th {
+  background: rgba(28, 42, 66, 0.92);
+  color: #9db8e5;
+  text-transform: uppercase;
+  font-size: 0.84rem;
+  letter-spacing: 0.12em;
+}
+
+td {
+  background: rgba(15, 24, 39, 0.86);
+  color: #e7eefc;
+}
+
+tbody tr:hover td {
+  background: rgba(20, 31, 49, 0.96);
+}
+
+.status {
+  display: inline-block;
+  min-width: 84px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.status.pass {
+  background: rgba(74, 122, 224, 0.18);
+  color: #8eb5ff;
+}
+
+.status.fail {
+  background: rgba(242, 100, 69, 0.16);
+  color: #ff9b80;
+}
+
+.update-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.update-group input {
+  max-width: 96px;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.update-group button {
+  padding: 10px 14px;
+  box-shadow: 0 8px 16px rgba(242, 100, 69, 0.16);
+}
+
+.empty-message {
+  margin: 0;
+  color: #90a4c6;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding: 20px 12px 32px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-form {
+    grid-template-columns: 1fr;
+  }
+
+  .update-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .update-group input {
+    max-width: 100%;
+  }
+}
